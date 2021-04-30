@@ -22,7 +22,7 @@ data(df_opposition)
 
 ## Warm-Up
 
-Before we get our hands dirty with statistical inference in regression analyses, let's go over some of the key concepts discussed in this week's class.
+Before we get our hands dirty with statistical inference in regression analysis, let's go over some of the key concepts discussed in this week's class.
 
 ### Probability theory
 
@@ -107,7 +107,7 @@ Let's have a look at standard errors, hypothesis tests, and confidence intervals
 
 ```{r se, echo = FALSE}
 question("What is the standard error?",
-  answer("It is the standard deviation of an estimate that is captured over many repeated samples.", correct = T),
+  answer("It is the standard deviation of the sampling distribution of an estimate that is captured over many repeated samples.", correct = T),
   answer("It is the normal standardized residual variance."),
   answer("It describes the errors that statisticians make when they enter code into their programming language in an unconcentrated manner."),
   answer("It is the mean for categorical variables."),
@@ -149,9 +149,9 @@ question("A 95% confidence interval means:",
 
 In this tutorial, you will be working again with the data on opposition party behavior in European national parliaments (`df_opposition`) by Tuttnauer (2018). This time, however, you don't only need to calculate estimates but you will conduct statistical inference and hypothesis testing.
 
-Let's look again at the model that you already had to specify in last week's exercise. As you might remember, you had to run a regression with `conflict_p` as dependent variable and `seatshare` as the main independent variable of interest. The working hypothesis was that larger opposition parties oppose the government more often than smaller ones. 
+Let's look again at the model that you already had to specify in last week's exercise. As you might remember, you had to run a regression with `conflict_p` as dependent variable and `seatshare` as the main independent variable of interest. The working hypothesis was (and still is) that larger opposition parties oppose the government more often than smaller ones. 
 
-To control for potential confounders, the model also included the following following control variables:
+To control for potential confounders, the model also includes the following control variables:
 
 * `abs_lrdiff`: Ideological distance from the government as the absolute difference between a party's left-right position and the size-weighted average position of the government coalition.
 * `ge`:  Government-experience value that ranges between 0 if the party has always been in opposition and 1 if the party has always been in government.
@@ -173,9 +173,9 @@ summary(model)
 
 ```
 
-### Hypothesis testing 
+### Hypothesis testing
 
-**Can you reject the null hypothesis that an size of an opposition party has no effect on voting against the government at the 95% confidence level?**
+**Can you reject the null hypothesis that the size of an opposition party has no effect on voting against the government at the 95% confidence level?**
 
 *Note that more than one answer can be correct.*
 
@@ -235,6 +235,7 @@ question_text("Enter the value of the lower bound of the 95% confidence interval
 ```{r confint_high, echo = FALSE}
 question_text("Enter the value of the upper bound of the 95% confidence interval here (rounded to two digits behind the decimal):",
   answer("1.24", correct = T, message = "Correct. You chose to calculate the interval based on the normal distribution. Note that some researchers prefer to calculate it based on the t-distribution which makes the interval more conservative."),
+    answer("1.25", correct = T, message = "Correct. You chose to calculate the interval based on the normal distribution. Note that some researchers prefer to calculate it based on the t-distribution which makes the interval more conservative."),
   answer("1.26", correct = T, message = "Correct. You chose to calculate the interval based on the t-distribution. Note that some researchers prefer to calculate it based on the normal distribution which makes the interval less conservative."),
     answer("124.49", correct = F, message = "Close. Hint: Do not report the value in percent."),
   answer("126.34", correct = F, message = "Close. Hint: Do not report the value in percent."),
