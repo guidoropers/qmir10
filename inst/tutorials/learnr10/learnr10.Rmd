@@ -84,21 +84,6 @@ question("The density of the standard normal distribution has a very important c
 ```
 
 
-**What is a key insight from the central limit theorem?**
-
-```{r centrallimit, echo = FALSE}
-question("According to the central limit theorem, if we draw a large number of independent samples and put the resulting means in a distribution, we will get...",
-  answer("a normal distribution.", correct = T),
-  answer("a binomial distribution."),
-  answer("the mean of our variable."),
-  answer("none of the answer options is correct."),
-  random_answer_order = TRUE,
-  allow_retry = T,
-  incorrect = "Hint: Have a look at the refresher material on probability theory."
-)
-
-```
-
 ### Confidence intervals, standard errors and hypothesis tests
 
 Let's have a look at standard errors, hypothesis tests, and confidence intervals.
@@ -308,6 +293,6 @@ learnrhash::encoder_logic(strip_output = TRUE)
 ```
 
 ```{r encode, echo=FALSE}
-learnrhash::encoder_ui(default_ui(url = "SOMEURL"))
+learnrhash::encoder_ui(default_ui(url = "https://ilias.uni-mannheim.de/goto.php?target=svy_1136819&client_id=ILIAS"))
 ```
 
